@@ -14,15 +14,23 @@ class CreateClientsTable extends Migration
     public function up()
     {
       Schema::create('clients', function (Blueprint $table) {
-          $table->increments('id')->index();
+          $table->increments('id');
           $table->string('name');
           $table->string('last_name');
-          $table->integer('identification',12);
+          $table->integer('identification')->length(10);
           $table->integer('state')->unsigned();
-          $table->foreign('state')->references('id')->on('departaments');
+    			$table->foreign('state')
+    				->references('id')
+    				->on('departaments')
+    				->onDelete('cascade')
+    				->onUpdate('cascade');
           $table->integer('city')->unsigned();
-          $table->foreign('city')->references('id')->on('cities');
-          $table->integer('phone',12);
+    			$table->foreign('city')
+    				->references('id')
+    				->on('cities')
+    				->onDelete('cascade')
+    				->onUpdate('cascade');
+          $table->integer('phone')->length(10);
           $table->string('email');
           $table->timestamps();
       });

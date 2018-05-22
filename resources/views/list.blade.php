@@ -6,8 +6,12 @@
         <h2>Lista de clientes</h2>
         <p>Estos son los clientes registrados:</p>
         <a href="{{url('/')}}" class="btn btn-primary">
-          <i class="fa fa-plus"></i> Agregar Cliente
-        </a> <hr>
+          Agregar Cliente
+        </a>
+        <a href="{{url('/export')}}" class="btn btn-success">
+          Descargar Lista
+        </a>
+        <hr>
       </div>
       <div class="col-md-2"></div>
       <div class="col-md-8">

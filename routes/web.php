@@ -13,4 +13,6 @@
 
 Route::get('/', 'ClientController@home');
 Route::get('/cities/{id}', 'ClientController@cities');
+Route::get('/winner', 'ClientController@winner');
+Route::get('/export', 'ClientController@export');
 Route::resource('clients', 'ClientController');

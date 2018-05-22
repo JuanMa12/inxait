@@ -15,6 +15,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="{{ url('/clients') }}">Ver Clientes</a></li>
+        <li><a href="{{ url('/winner') }}">Ver Ganador</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a target="_blank" href="http://juanmadev.info">by: Juan Manuel Ruiz</a></li>
